@@ -241,7 +241,7 @@ open class MultiProgressView: UIView, ProgressViewSectionDelegate {
   // MARK: - Main Methods
 
   public func setProgress(section: Int, to progress: Float) {
-    currentProgress[section] = max(0, min(progress, 1 - totalProgress + currentProgress[section]))
+    currentProgress[section] = progress
     setNeedsLayout()
     layoutIfNeeded()
   }
